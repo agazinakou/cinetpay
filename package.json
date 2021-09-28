@@ -1,6 +1,6 @@
 {
   "name": "@azinakou/cinetpay",
-  "version": "0.0.23",
+  "version": "0.0.1",
   "description": "Fast integration of CinetPay",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

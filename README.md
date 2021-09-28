@@ -42,7 +42,7 @@ Avec [npm](http://npmjs.org) faire:
 
 
 // If you use CommonJS imports with require() use the following approach:
-const cinetpay = require("@azinakou/cinetpay");
+const Cinetpay = require("@azinakou/cinetpay");
 
 // With ES6
 import { Cinetpay } from '@azinakou/cinetpay';
