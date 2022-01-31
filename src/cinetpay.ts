@@ -37,7 +37,7 @@ export class Cinetpay {
         data: qs.stringify({ ...paymentConfig, ...this.config }),
         timeout: 5000,
       })
-        .then((response) => {
+        .then((response: any) => {
           if (response.status === 200 && response.data.code === '201' && response.data.data) {
             localStorage.setItem('payment', JSON.stringify(response.data));
             window.location.href = response.data.data.payment_url;
@@ -45,7 +45,7 @@ export class Cinetpay {
             return response.data;
           }
         })
-        .catch((error) => {
+        .catch((error: any) => {
           console.log(error);
         });
     } catch (err) {
@@ -73,7 +73,7 @@ export class Cinetpay {
         data: qs.stringify({ transaction_id, ...this.config, token: transaction_id }),
         timeout: 5000,
       })
-        .then((response) => {
+        .then((response: any) => {
           if (response.status === 200 && response.data.code === '00' && response.data.data) {
             localStorage.setItem(transaction_id, JSON.stringify(response.data.data));
             return response.data;
@@ -81,7 +81,7 @@ export class Cinetpay {
             return response.data;
           }
         })
-        .catch((error) => {
+        .catch((error: any) => {
           console.log(error);
         });
     } catch (err) {
